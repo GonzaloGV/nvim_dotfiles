@@ -1,0 +1,8 @@
+# Snippet to safe import
+snippet sreq safe_require
+	local status_ok, ${1:package_name} = pcall(require, "${2:package}")
+	if not status_ok then
+		vim.notify("${3:package_name} Not found!")
+		return
+	end
+

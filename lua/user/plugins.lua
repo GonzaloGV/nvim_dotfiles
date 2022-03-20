@@ -101,6 +101,9 @@ return packer.startup(function(use)
   -- Which-key to check commands
   use "folke/Which-key.nvim"
 
+  -- nofify --
+  use "rcarriga/nvim-notify"
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
