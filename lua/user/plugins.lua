@@ -55,9 +55,7 @@ return packer.startup(function(use)
 	-- Colorschemes
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 	use("lunarvim/darkplus.nvim")
-	use("sainnhe/everforest")
 	use("folke/tokyonight.nvim")
-	use("EdenEast/nightfox.nvim")
 	use("ful1e5/onedark.nvim")
 
 	-- cmp plugins
