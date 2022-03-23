@@ -50,14 +50,15 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
-  use("lewis6991/impatient.nvim") -- Load modules faster
+	use("lewis6991/impatient.nvim") -- Load modules faster
 
 	-- Colorschemes
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 	use("lunarvim/darkplus.nvim")
 	use("sainnhe/everforest")
 	use("folke/tokyonight.nvim")
-  use("EdenEast/nightfox.nvim")
+	use("EdenEast/nightfox.nvim")
+	use("ful1e5/onedark.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -92,17 +93,17 @@ return packer.startup(function(use)
 	-- Lualine
 	use("nvim-lualine/lualine.nvim")
 
-  -- Indent Lines
-  use "lukas-reineke/indent-blankline.nvim"
+	-- Indent Lines
+	use("lukas-reineke/indent-blankline.nvim")
 
-  -- Toggle Term - commandline inside vim
-  use "akinsho/toggleterm.nvim"
+	-- Toggle Term - commandline inside vim
+	use("akinsho/toggleterm.nvim")
 
-  -- Which-key to check commands
-  use "folke/Which-key.nvim"
+	-- Which-key to check commands
+	use("folke/Which-key.nvim")
 
-  -- nofify --
-  use "rcarriga/nvim-notify"
+	-- nofify --
+	use("rcarriga/nvim-notify")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
