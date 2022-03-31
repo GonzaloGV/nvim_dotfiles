@@ -57,6 +57,8 @@ return packer.startup(function(use)
 	use("lunarvim/darkplus.nvim")
 	use("folke/tokyonight.nvim")
 	use("ful1e5/onedark.nvim")
+  -- use("lunarVim/onedarker.nvim")
+  use("AlphaTechnolog/onedarker.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
