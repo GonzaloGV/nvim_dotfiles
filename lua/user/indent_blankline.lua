@@ -9,7 +9,7 @@ vim.cmd([[highlight IndentBlanklineIndent2 guibg=#282c34 gui=nocombine]])
 
 indent_bline.setup({
 	show_current_context = true,
-	show_current_context_start = true,
+	show_current_context_start = false,
 	char = "",
 	char_highlight_list = {
 		"IndentBlanklineIndent1",
@@ -19,5 +19,5 @@ indent_bline.setup({
 		"IndentBlanklineIndent1",
 		"IndentBlanklineIndent2",
 	},
-	show_trailing_blankline_indent = false,
+	show_trailing_blankline_indent = true,
 })
