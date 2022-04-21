@@ -45,10 +45,10 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
-	use("numToStr/Comment.nvim") -- Easily comment stuff
+	use({"numToStr/Comment.nvim", commit="0aaea32f27315e2a99ba4c12ab9def5cbb4842e4"}) -- Easily comment stuff
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
-	use("akinsho/bufferline.nvim")
+	use({ "akinsho/bufferline.nvim", branch = "main" })
 	use("moll/vim-bbye")
 	use("lewis6991/impatient.nvim") -- Load modules faster
 
@@ -57,8 +57,8 @@ return packer.startup(function(use)
 	use("lunarvim/darkplus.nvim")
 	use("folke/tokyonight.nvim")
 	use("ful1e5/onedark.nvim")
-  -- use("lunarVim/onedarker.nvim")
-  use("AlphaTechnolog/onedarker.nvim")
+	use("lunarVim/onedarker.nvim")
+	-- use("AlphaTechnolog/onedarker.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -97,13 +97,33 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- Toggle Term - commandline inside vim
-	use("akinsho/toggleterm.nvim")
+	use({ "akinsho/toggleterm.nvim", branch = "main" })
 
 	-- Which-key to check commands
 	use("folke/Which-key.nvim")
 
 	-- nofify --
 	use("rcarriga/nvim-notify")
+
+	-- display hex colors --
+	use("norcalli/nvim-colorizer.lua")
+
+	-- project manager --
+	use("ahmedkhalf/project.nvim")
+
+	-- TS autoclosing --
+	use("windwp/nvim-ts-autotag")
+
+	-- openscad --
+	use({
+		"salkin-mada/openscad.nvim",
+		config = function()
+			require("openscad")
+			-- load snippets, note requires
+			vim.g.openscad_load_snippets = true
+		end,
+		requires = "L3MON4D3/LuaSnip",
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

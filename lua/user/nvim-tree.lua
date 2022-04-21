@@ -42,11 +42,10 @@ nvim_tree.setup({
 		"dashboard",
 		"alpha",
 	},
-  auto_reload_on_write = true,
-	auto_close = true,
+	auto_reload_on_write = true,
 	open_on_tab = false,
 	hijack_cursor = false,
-	update_cwd = true,
+	update_cwd = false,
 	update_to_buf_dir = {
 		enable = true,
 		auto_open = true,
