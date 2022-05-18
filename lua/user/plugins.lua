@@ -114,16 +114,19 @@ return packer.startup(function(use)
 	-- TS autoclosing --
 	use("windwp/nvim-ts-autotag")
 
+  -- Test startuptime --
+  use("dstein64/vim-startuptime")
+
 	-- openscad --
-	use({
-		"salkin-mada/openscad.nvim",
-		config = function()
-			require("openscad")
-			-- load snippets, note requires
-			vim.g.openscad_load_snippets = true
-		end,
-		requires = "L3MON4D3/LuaSnip",
-	})
+	-- use({
+	-- 	"salkin-mada/openscad.nvim",
+	-- 	config = function()
+	-- 		require("openscad")
+	-- 		-- load snippets, note requires
+	-- 		vim.g.openscad_load_snippets = true
+	-- 	end,
+	-- 	requires = "L3MON4D3/LuaSnip",
+	-- })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

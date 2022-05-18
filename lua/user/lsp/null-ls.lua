@@ -12,10 +12,11 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
+    formatting.eslint,
 		formatting.black,
 		-- formatting.yapf,
 		formatting.stylua,
-		diagnostics.flake8,
+		diagnostics.flake8.with({ extra_args = {"--ignore=E501"}}),
 	},
 })
