@@ -11,6 +11,7 @@ telescope.setup({
 		prompt_prefix = " ",
 		selection_caret = " ",
 		path_display = { "smart" },
+		file_ignore_patterns = { "node_modules", "build" },
 
 		mappings = {
 			i = {
@@ -94,4 +95,3 @@ telescope.setup({
 		-- please take a look at the readme of the extension you want to configure
 	},
 })
-

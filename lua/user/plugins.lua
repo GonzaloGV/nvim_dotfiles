@@ -45,7 +45,7 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
-	use({"numToStr/Comment.nvim", commit="0aaea32f27315e2a99ba4c12ab9def5cbb4842e4"}) -- Easily comment stuff
+	use({ "numToStr/Comment.nvim", commit = "0aaea32f27315e2a99ba4c12ab9def5cbb4842e4" }) -- Easily comment stuff
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 	use({ "akinsho/bufferline.nvim", branch = "main" })
@@ -114,8 +114,25 @@ return packer.startup(function(use)
 	-- TS autoclosing --
 	use("windwp/nvim-ts-autotag")
 
-  -- Test startuptime --
-  use("dstein64/vim-startuptime")
+	-- Test startuptime --
+	use("dstein64/vim-startuptime")
+
+	-- multi cursor --
+	use("mg979/vim-visual-multi")
+
+	-- markdown rendered --
+	-- use({
+	--	"iamcco/markdown-preview.nvim",
+--		run = "cd app && npm install",
+	--	setup = function()
+	--		vim.g.mkdp_filetypes = { "markdown" }
+	--	end,
+	--	ft = { "markdown" },
+	--})
+	-- -- Hydra --
+	-- use { 'anuvyklack/hydra.nvim',
+	--   requires = 'anuvyklack/keymap-layer.nvim' -- needed only for pink hydras
+	-- }
 
 	-- openscad --
 	-- use({

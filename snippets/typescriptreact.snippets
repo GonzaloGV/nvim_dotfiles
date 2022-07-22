@@ -1,0 +1,97 @@
+# Snippet to create react context
+snippet rctx
+	import { createContext } from "react";
+
+	interface ContextProps {
+		prop?: null;
+	}
+
+	export const ${1:ContextName}Context = createContext({} as ContextProps);
+
+
+
+snippet rslcmp react_component
+	export const ${1:ComponentName} = () => (${2:body});
+
+snippet rprov react_context_provider
+	import { FC, useReducer } from "react";
+
+	import { ${1:ContextName}Context } from "./";
+	import { ${1:ContextName}Reducer } from "./";
+
+	export interface State {
+		sidemenuOpen: boolean;
+	};
+
+
+	const ${1:ContextName}_INITIAL_STATE: UIState = {
+		sidemenuOpen: false
+	};
+
+	export const ${1:ContextName}Provider: FC = () => {
+		const [state, dispatch] = useReducer(${1:ContextName}Reducer, ${1:ContextName}_INITIAL_STATE)
+		
+		return (<${1:ContextName}Context.Provider value={{
+			sidemenuOpen: false
+		}}>
+		</${1:ContextName}Context.Provider>)
+	};
+
+snippet nextdoc next_document
+	import Document, {
+		Html,
+		Head,
+		Main,
+		NextScript,
+	} from 'next/document';
+
+	class MyDocument extends Document {
+		render() {
+			return (
+				<Html>
+					<Head>
+					</Head>
+					<body>
+						<Main />
+						<NextScript />
+					</body>
+				</Html>
+			);
+		}
+	}
+
+	export default MyDocument;
+
+snippet trfc typescript_react_functional_component
+	import { FC } from 'react';
+
+	interface Props {
+
+	}
+
+	export const ${1:ComponentName}: FC<Props> = (props) => {
+		return (
+			<div>
+				${2}
+			</div>
+		);
+	};
+
+snippet tnextpage typescript_nextjs_page
+	import { NextPage } from 'next';
+
+	interface Props {
+	}
+
+	const ${1:PageName}: NextPage<Props> = (props) => {
+		return (
+			<div>
+				${1:PageName}
+			</div>
+		);
+	};
+
+	export default ${1:PageName};
+
+snippet tnextlink nextjs_link
+	import NextLink from 'next/link';

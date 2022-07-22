@@ -13,7 +13,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
-    formatting.eslint,
+    -- diagnostics.eslint,
 		formatting.black,
 		-- formatting.yapf,
 		formatting.stylua,
