@@ -120,6 +120,9 @@ return packer.startup(function(use)
 	-- multi cursor --
 	use("mg979/vim-visual-multi")
 
+  -- treesitter Playground --
+  use('nvim-treesitter/playground')
+  --
 	-- markdown rendered --
 	-- use({
 	--	"iamcco/markdown-preview.nvim",
