@@ -54,10 +54,10 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-	use("lunarvim/darkplus.nvim")
+	-- use("lunarvim/darkplus.nvim")
 	use("folke/tokyonight.nvim")
-	use("ful1e5/onedark.nvim")
-	use("lunarVim/onedarker.nvim")
+	-- use("ful1e5/onedark.nvim")
+	-- use("lunarVim/onedarker.nvim")
 	-- use("AlphaTechnolog/onedarker.nvim")
 
 	-- cmp plugins
@@ -73,8 +73,9 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 	-- LSP
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig") -- enable LSP
-	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
 	-- Telescope
@@ -120,13 +121,13 @@ return packer.startup(function(use)
 	-- multi cursor --
 	use("mg979/vim-visual-multi")
 
-  -- treesitter Playground --
-  use('nvim-treesitter/playground')
-  --
+	-- treesitter Playground --
+	use("nvim-treesitter/playground")
+	--
 	-- markdown rendered --
 	-- use({
 	--	"iamcco/markdown-preview.nvim",
---		run = "cd app && npm install",
+	--		run = "cd app && npm install",
 	--	setup = function()
 	--		vim.g.mkdp_filetypes = { "markdown" }
 	--	end,

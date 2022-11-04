@@ -20,11 +20,10 @@ snippet rprov react_context_provider
 	import { ${1:ContextName}Reducer } from "./";
 
 	export interface ${1:ContextName}State {
-		sidemenuOpen: boolean;
 	};
 
 
-	const ${1:ContextName}_INITIAL_STATE: UIState = {
+	const ${1:ContextName}_INITIAL_STATE: ${1:ContextName}State = {
 		sidemenuOpen: false
 	};
 
@@ -32,7 +31,6 @@ snippet rprov react_context_provider
 		const [state, dispatch] = useReducer(${1:ContextName}Reducer, ${1:ContextName}_INITIAL_STATE)
 		
 		return (<${1:ContextName}Context.Provider value={{
-			sidemenuOpen: false
 		}}>
 		</${1:ContextName}Context.Provider>)
 	};
